@@ -7,43 +7,13 @@ import PageTransition from '../components/PageTransition';
 const projects = [
   {
     id: 1,
-    title: "E-COMMERCE",
-    category: "Development / Design",
+    title: "BookShelf App",
+    category: "Web Application",
     year: "2024",
     image: "/assets/project1.jpg",
     fallbackImage: "https://images.unsplash.com/photo-1481481322814-3d6412795c15?auto=format&fit=crop&q=80&w=800",
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 2,
-    title: "TASKFLOW",
-    category: "Web Application",
-    year: "2023",
-    image: "/assets/project2.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800",
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 3,
-    title: "NEURO ART",
-    category: "AI / Creative",
-    year: "2023",
-    image: "/assets/project3.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=800",
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 4,
-    title: "MINIMAL",
-    category: "Template",
-    year: "2022",
-    image: "/assets/project4.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
-    link: "#",
-    github: "#"
+    link: "https://yorissatriaananda.github.io/BookShelf/",
+    github: "https://github.com/YorisSatriaAnanda/BookShelf"
   }
 ];
 
