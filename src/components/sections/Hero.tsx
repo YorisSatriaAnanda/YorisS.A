@@ -17,7 +17,7 @@ const Hero = () => {
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
-              className="text-[10vw] md:text-[9vw] leading-[0.8] font-syne font-extrabold tracking-tighter"
+              className="text-[8.5vw] md:text-[9vw] leading-[0.8] font-syne font-extrabold tracking-tighter"
             >
               FRONTEND
             </motion.h1>
@@ -33,7 +33,7 @@ const Hero = () => {
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
-              className="text-[10vw] md:text-[9vw] leading-[0.8] font-syne font-extrabold tracking-tighter"
+              className="text-[8.5vw] md:text-[9vw] leading-[0.8] font-syne font-extrabold tracking-tighter"
             >
               DEVELOPER
             </motion.h1>
