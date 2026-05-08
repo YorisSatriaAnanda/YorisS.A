@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 const Contact = () => {
   return (
     <section id="contact" className="py-32 border-b border-white/10">
