@@ -1,25 +1,44 @@
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
+  const location = useLocation();
+  
+  // Format the path for display
+  const pathName = location.pathname === '/' 
+    ? 'HOME' 
+    : location.pathname.substring(1).toUpperCase();
+
   return (
     <>
       {children}
-      {/* Slide in from bottom when exiting */}
+      
+      {/* Slide in from bottom when exiting current page (No text, just white cover) */}
       <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 0 }}
-        exit={{ scaleY: 1 }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed inset-0 bg-white z-[60] origin-bottom pointer-events-none"
+        initial={{ y: '100%' }}
+        animate={{ y: '100%' }}
+        exit={{ y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed inset-0 bg-white z-[60] pointer-events-none"
       />
-      {/* Slide out to top when entering */}
+
+      {/* Slide out to top when entering new page (Contains text of the new page) */}
       <motion.div
-        initial={{ scaleY: 1 }}
-        animate={{ scaleY: 0 }}
-        exit={{ scaleY: 0 }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed inset-0 bg-white z-[60] origin-top pointer-events-none"
-      />
+        initial={{ y: 0 }}
+        animate={{ y: '-100%' }}
+        exit={{ y: '-100%' }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed inset-0 bg-white z-[60] flex items-center justify-center pointer-events-none"
+      >
+        <motion.h2 
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.3, ease: 'easeInOut' }}
+          className="text-black text-5xl md:text-8xl font-syne font-bold tracking-tighter uppercase"
+        >
+          {pathName}
+        </motion.h2>
+      </motion.div>
     </>
   );
 };
