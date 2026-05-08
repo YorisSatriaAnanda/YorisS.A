@@ -29,15 +29,12 @@ const About = () => {
           
           <div className="lg:col-span-8">
             <h3 className="text-3xl md:text-5xl lg:text-6xl font-syne font-bold leading-tight mb-12">
-              I BELIEVE IN DESIGN THAT IS NOT ONLY BEAUTIFUL BUT <span className="text-stroke hover-target">PROVOKES THOUGHT</span>.
+              STUDENT BY DAY, <span className="text-stroke hover-target">FRONTEND DEVELOPER</span>.
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-8 text-lg font-sans text-primary-300 leading-relaxed">
+            <div className="text-lg font-sans text-primary-300 leading-relaxed max-w-3xl">
               <p>
-                My background in engineering paired with an obsession for design allows me to create digital products that blur the line between utility and art. I don't just build websites; I craft interactive experiences.
-              </p>
-              <p>
-                Currently exploring the intersection of WebGL, creative coding, and modern web frameworks to push the boundaries of what a browser can render.
+                I'm an 11th-grade Software Engineering (PPLG) student at SMKN 1 Ciomas. I specialize in building sleek, high-performing websites and user interfaces. While still in school, I treat every project as a professional craft and constantly explore new technologies to push my boundaries as a developer.
               </p>
             </div>
             

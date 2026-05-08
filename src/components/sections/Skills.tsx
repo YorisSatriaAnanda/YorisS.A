@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-  "React / Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", 
-  "Node.js", "PostgreSQL", "Creative Coding", "WebGL"
+  "React", "TypeScript", "Tailwind CSS", "MySQL", 
+  "PHP", "Bootstrap", "HTML", "JavaScript"
 ];
 
 const Skills = () => {
