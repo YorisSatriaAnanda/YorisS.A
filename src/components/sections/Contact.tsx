@@ -1,44 +1,50 @@
 import { motion } from 'framer-motion';
-import { Send } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-32 border-b border-white/10">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter">Get in Touch.</h2>
-          <p className="text-primary-400 text-lg mb-12 max-w-2xl mx-auto">
-            Whether you have a question or just want to say hi, I'll try my best to get back to you! My inbox is always open.
-          </p>
+        <div className="grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <h2 className="text-xl tracking-widest font-medium uppercase text-primary-400">
+              [ Contact ]
+            </h2>
+          </div>
           
-          <form className="max-w-md mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <input 
-              type="text" 
-              placeholder="Your Name" 
-              className="w-full bg-primary-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-            />
-            <input 
-              type="email" 
-              placeholder="Your Email" 
-              className="w-full bg-primary-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-            />
-            <textarea 
-              placeholder="Your Message" 
-              rows={4}
-              className="w-full bg-primary-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors resize-none"
-            ></textarea>
+          <div className="lg:col-span-8">
+            <h3 className="text-5xl md:text-7xl font-syne font-bold leading-tight mb-12 uppercase">
+              Let's create something <span className="text-stroke hover-target text-transparent">unforgettable</span>.
+            </h3>
             
-            <button className="w-full flex items-center justify-center gap-2 bg-white text-black font-semibold rounded-xl px-4 py-3 hover:bg-primary-200 transition-colors">
-              Send Message <Send size={18} />
-            </button>
-          </form>
-        </motion.div>
+            <form className="space-y-8 mt-16" onSubmit={(e) => e.preventDefault()}>
+              <div className="border-b border-white/30 pb-4">
+                <input 
+                  type="text" 
+                  placeholder="WHAT'S YOUR NAME?" 
+                  className="w-full bg-transparent text-2xl md:text-4xl font-syne uppercase focus:outline-none placeholder:text-primary-800 hover-target text-white"
+                />
+              </div>
+              <div className="border-b border-white/30 pb-4">
+                <input 
+                  type="email" 
+                  placeholder="WHAT'S YOUR EMAIL?" 
+                  className="w-full bg-transparent text-2xl md:text-4xl font-syne uppercase focus:outline-none placeholder:text-primary-800 hover-target text-white"
+                />
+              </div>
+              <div className="border-b border-white/30 pb-4">
+                <textarea 
+                  placeholder="TELL ME ABOUT YOUR PROJECT" 
+                  rows={3}
+                  className="w-full bg-transparent text-2xl md:text-4xl font-syne uppercase focus:outline-none placeholder:text-primary-800 hover-target resize-none text-white"
+                ></textarea>
+              </div>
+              
+              <button className="text-xl border border-white px-12 py-6 uppercase tracking-widest hover:bg-white hover:text-black transition-colors hover-target mt-8 w-full md:w-auto">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   );

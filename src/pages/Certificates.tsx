@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import PageTransition from '../components/PageTransition';
 
 const certificates = [
   {
@@ -29,7 +30,8 @@ const certificates = [
 
 const Certificates = () => {
   return (
-    <div className="pt-32 pb-24 min-h-screen">
+    <PageTransition>
+      <div className="pt-32 pb-24 min-h-screen">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,8 +72,9 @@ const Certificates = () => {
             </motion.div>
           ))}
         </div>
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

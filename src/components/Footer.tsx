@@ -1,27 +1,43 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Mail } from 'lucide-react';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="border-t border-white/10 py-12 mt-20">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex flex-col items-center md:items-start gap-2">
-          <span className="text-2xl font-bold tracking-tighter">YORIS.</span>
-          <p className="text-primary-500 text-sm">
-            © {new Date().getFullYear()} All rights reserved.
-          </p>
+    <footer className="pt-32 pb-8 bg-primary-950 border-t border-white/10">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-6xl font-syne font-bold mb-6 tracking-tighter">HAVE AN IDEA?</h2>
+            <p className="text-primary-400 text-lg md:text-xl font-sans">
+              I'm currently available for freelance work. Let's build something extraordinary together.
+            </p>
+          </div>
+          
+          <div>
+            <a 
+              href="mailto:hello@yoris.com" 
+              className="group flex items-center gap-6 text-3xl md:text-5xl font-syne font-bold transition-colors hover-target"
+            >
+              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300">
+                hello@yoris.com 
+              </span>
+              <span className="p-4 rounded-full border border-white/20 group-hover:bg-white group-hover:text-black transition-all">
+                <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" size={24} />
+              </span>
+            </a>
+          </div>
         </div>
-        
-        <div className="flex items-center gap-6 text-primary-400">
-          <a href="#" className="hover:text-white transition-colors">
-            <FaGithub size={20} />
-          </a>
-          <a href="#" className="hover:text-white transition-colors">
-            <FaLinkedin size={20} />
-          </a>
-          <a href="#" className="hover:text-white transition-colors">
-            <Mail size={20} />
-          </a>
+
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-t border-white/10 pt-8">
+          <div className="flex flex-wrap gap-8">
+            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Github</a>
+            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">LinkedIn</a>
+            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Twitter</a>
+            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Dribbble</a>
+          </div>
+          <div className="text-left md:text-right text-primary-500 font-mono text-xs uppercase tracking-widest flex flex-col gap-2">
+            <p>LOCAL TIME: {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute:'2-digit' })}</p>
+            <p>&copy; {new Date().getFullYear()} YORIS. ALL RIGHTS RESERVED.</p>
+          </div>
         </div>
       </div>
     </footer>
