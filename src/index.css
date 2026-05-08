@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-primary-50: #ffffff;
+  --color-primary-400: #a3a3a3;
+  --color-primary-900: #171717;
+  --color-primary-950: #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-primary-950 text-primary-50 font-sans antialiased selection:bg-white selection:text-black;
+    cursor: none; /* For custom cursor */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-syne;
+  }
+  
+  /* Ensure links hide default cursor too */
+  a, button {
+    cursor: none;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    color: transparent;
+  }
+  
+  .text-stroke-hover:hover {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    color: white;
+  }
+
+  .border-b-1 {
+    border-bottom-width: 1px;
+  }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Hide scrollbar for cleaner look */
+}
