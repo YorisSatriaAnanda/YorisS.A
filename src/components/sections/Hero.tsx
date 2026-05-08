@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -46,12 +47,23 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1.2 }}
           className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-t border-white/20 pt-8"
         >
-          <p className="max-w-sm text-primary-400 font-sans text-sm md:text-base leading-relaxed">
-            I craft digital experiences with a focus on typography, motion, and brutalist aesthetics.
-            Pushing the boundaries of the web.
-          </p>
+          <div className="flex flex-col gap-8">
+            <p className="max-w-sm text-primary-400 font-sans text-sm md:text-base leading-relaxed">
+              I craft digital experiences with a focus on typography, motion, and brutalist aesthetics.
+              Pushing the boundaries of the web.
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              <Link to="/projects" className="bg-white text-black px-6 md:px-8 py-3 md:py-4 font-medium uppercase tracking-widest text-xs md:text-sm hover:bg-transparent hover:text-white border border-white transition-colors hover-target">
+                View Work
+              </Link>
+              <a href="#" className="border border-white px-6 md:px-8 py-3 md:py-4 uppercase tracking-widest text-xs md:text-sm hover:bg-white hover:text-black transition-colors hover-target">
+                Download CV
+              </a>
+            </div>
+          </div>
 
-          <div className="text-right">
+          <div className="text-left md:text-right">
             <p className="text-xs tracking-widest text-primary-500 mb-1">AVAILABLE FOR HIRE</p>
             <p className="font-syne font-bold">BASED IN INDONESIA</p>
           </div>
