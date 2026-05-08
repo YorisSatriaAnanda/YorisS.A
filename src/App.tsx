@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <CustomCursor />
-      <div className="min-h-screen flex flex-col bg-primary-950 text-primary-50 font-sans">
+      <div className="min-h-screen flex flex-col bg-primary-950 text-primary-50 font-sans overflow-x-hidden">
         <Navbar />
         <main className="flex-grow">
           <Routes>
