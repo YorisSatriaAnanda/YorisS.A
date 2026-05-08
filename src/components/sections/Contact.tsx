@@ -12,7 +12,7 @@ const Contact = () => {
           </div>
           
           <div className="lg:col-span-8">
-            <h3 className="text-5xl md:text-7xl font-syne font-bold leading-tight mb-12 uppercase">
+            <h3 className="text-4xl sm:text-5xl md:text-7xl font-syne font-bold leading-tight mb-12 uppercase break-words">
               Let's create something <span className="text-stroke hover-target text-transparent">unforgettable</span>.
             </h3>
             
