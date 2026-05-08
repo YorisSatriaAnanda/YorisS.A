@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end pb-20 px-4 md:px-12">
+    <section className="relative min-h-screen flex flex-col justify-center md:justify-end pb-24 md:pb-32 px-4 md:px-12 pt-32">
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
 
       <div className="w-full z-10">
