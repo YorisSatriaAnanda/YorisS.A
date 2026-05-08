@@ -4,27 +4,57 @@ import PageTransition from '../components/PageTransition';
 const certificates = [
   {
     id: 1,
-    title: "AWS Certified Developer – Associate",
-    issuer: "Amazon Web Services",
-    date: "2024",
+    title: "Belajar Dasar Manajemen Proyek",
+    issuer: "Dicoding Academy",
+    date: "May 2025",
     image: "/assets/cert1.jpg",
-    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=AWS+Developer+Certificate"
+    link: "dicoding.com/certificates/07Z674EY2PQR",
+    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Certificate"
   },
   {
     id: 2,
-    title: "Meta Front-End Developer Professional Certificate",
-    issuer: "Coursera",
-    date: "2023",
+    title: "Belajar Dasar Pemrograman Web",
+    issuer: "Dicoding Academy",
+    date: "May 2025",
     image: "/assets/cert2.jpg",
-    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Meta+Front-End"
+    link: "dicoding.com/certificates/1OP823LO1PQK",
+    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Certificate"
   },
   {
     id: 3,
-    title: "Full Stack JavaScript Developer",
-    issuer: "Dicoding Indonesia",
-    date: "2023",
+    title: "Belajar Dasar Pemrograman JavaScript",
+    issuer: "Dicoding Academy",
+    date: "May 2025",
     image: "/assets/cert3.jpg",
-    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Full+Stack"
+    link: "dicoding.com/certificates/ERZREO4VWXYV",
+    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Certificate"
+  },
+  {
+    id: 4,
+    title: "Belajar Membuat Front-End Web untuk Pemula",
+    issuer: "Dicoding Academy",
+    date: "May 2025",
+    image: "/assets/cert4.jpg",
+    link: "dicoding.com/certificates/RVZKW31YQZD5",
+    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Certificate"
+  },
+  {
+    id: 5,
+    title: "Financial Literacy 101",
+    issuer: "Dicoding Academy",
+    date: "July 2025",
+    image: "/assets/cert5.jpg",
+    link: "dicoding.com/certificates/KEXL2EQ7RZG2",
+    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Certificate"
+  },
+  {
+    id: 6,
+    title: "Introduction to Financial Literacy",
+    issuer: "Dicoding Academy",
+    date: "April 2026",
+    image: "/assets/cert6.jpg",
+    link: "dicoding.com/certificates/JMZVO4GGRXN9",
+    fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Dicoding+Certificate"
   }
 ];
 
@@ -40,7 +70,7 @@ const Certificates = () => {
           className="mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">Certificates.</h1>
-          <p className="text-primary-400 text-lg max-w-2xl">
+          <p className="text-primary-400 text-lg max-w-2xl mb-8">
             My professional certifications and educational achievements in software development.
           </p>
         </motion.div>
@@ -67,11 +97,41 @@ const Certificates = () => {
               <div className="px-4 pb-4">
                 <h3 className="text-lg font-bold mb-1">{cert.title}</h3>
                 <p className="text-primary-400 text-sm mb-2">{cert.issuer}</p>
-                <p className="text-xs text-primary-500 font-mono">{cert.date}</p>
+                <div className="flex justify-between items-center mt-4">
+                  <p className="text-xs text-primary-500 font-mono">{cert.date}</p>
+                  <a 
+                    href={`https://${cert.link}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-xs font-mono uppercase border border-white/20 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
+                  >
+                    Verify
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-16 flex justify-center"
+        >
+          <a 
+            href="https://drive.google.com/drive/folders/1mxn3mNGLYYMFI1qqpL4Wr2n1E34hGqf3?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white font-mono text-sm uppercase tracking-wider rounded-full hover:bg-white hover:text-black transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            View Google Drive Folder
+          </a>
+        </motion.div>
         </div>
       </div>
     </PageTransition>

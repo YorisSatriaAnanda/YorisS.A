@@ -34,7 +34,7 @@ const About = () => {
             
             <div className="text-lg font-sans text-primary-300 leading-relaxed max-w-3xl">
               <p>
-                I'm an 11th-grade Software Engineering (PPLG) student at SMKN 1 Ciomas. I specialize in building sleek, high-performing websites and user interfaces. While still in school, I treat every project as a professional craft and constantly explore new technologies to push my boundaries as a developer.
+                I’m an 11th-grade PPLG student at SMKN 1 Ciomas with an interest in frontend development and web design. I enjoy creating modern websites, learning new things, and improving little by little through every project I build.
               </p>
             </div>
             
