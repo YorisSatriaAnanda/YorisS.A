@@ -34,12 +34,12 @@ const Footer = () => {
           <div>
             <button 
               onClick={handleCopy}
-              className="group flex items-center gap-6 text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2 text-left"
+              className="group flex items-center gap-4 md:gap-6 text-xl sm:text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2 text-left w-full"
             >
-              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300 pb-2 inline-block">
+              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300 pb-2 inline-block break-all">
                 yorissatriaananda@gmail.com
               </span>
-              <span className={`w-14 h-14 flex items-center justify-center rounded-full border border-white/20 transition-all ${copied ? 'bg-white text-black' : 'group-hover:bg-white group-hover:text-black'}`}>
+              <span className={`w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center rounded-full border border-white/20 transition-all ${copied ? 'bg-white text-black' : 'group-hover:bg-white group-hover:text-black'}`}>
                 <AnimatePresence mode="wait">
                   {copied ? (
                     <motion.div
