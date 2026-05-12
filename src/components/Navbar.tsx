@@ -36,7 +36,7 @@ const Navbar = () => {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 bg-primary-50 text-primary-950 z-40 flex flex-col justify-center px-12"
+            className="fixed inset-0 bg-primary-50 text-primary-950 z-40 flex flex-col justify-center px-6 md:px-12"
           >
             <nav className="flex flex-col gap-4">
               {navLinks.map((link, i) => (
