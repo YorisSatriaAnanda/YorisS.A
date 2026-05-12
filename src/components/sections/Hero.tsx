@@ -57,7 +57,7 @@ const Hero = () => {
               <Link to="/projects" className="bg-white text-black px-6 md:px-8 py-3 md:py-4 font-medium uppercase tracking-widest text-xs md:text-sm hover:bg-transparent hover:text-white border border-white transition-colors hover-target">
                 View Work
               </Link>
-              <a href="#" className="border border-white px-6 md:px-8 py-3 md:py-4 uppercase tracking-widest text-xs md:text-sm hover:bg-white hover:text-black transition-colors hover-target">
+              <a href="/cv.pdf" download="CV_Yoris_Satria_Ananda.pdf" className="border border-white px-6 md:px-8 py-3 md:py-4 uppercase tracking-widest text-xs md:text-sm hover:bg-white hover:text-black transition-colors hover-target">
                 Download CV
               </a>
             </div>
