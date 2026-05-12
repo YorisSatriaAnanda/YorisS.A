@@ -1,6 +1,17 @@
-import { FaArrowRight } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaArrowRight, FaCheck } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('yorissatriaananda@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <footer className="pt-32 pb-8 bg-primary-950 border-t border-white/10">
       <div className="container mx-auto px-6">
@@ -13,17 +24,39 @@ const Footer = () => {
           </div>
           
           <div>
-            <a 
-              href="mailto:yorissatriaananda@gmail.com" 
-              className="group flex items-center gap-6 text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2"
+            <button 
+              onClick={handleCopy}
+              className="group flex items-center gap-6 text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2 text-left"
             >
               <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300 pb-2 inline-block">
-                yorissatriaananda@gmail.com 
+                yorissatriaananda@gmail.com
               </span>
-              <span className="p-4 rounded-full border border-white/20 group-hover:bg-white group-hover:text-black transition-all">
-                <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" size={24} />
+              <span className={`w-14 h-14 flex items-center justify-center rounded-full border border-white/20 transition-all ${copied ? 'bg-white text-black' : 'group-hover:bg-white group-hover:text-black'}`}>
+                <AnimatePresence mode="wait">
+                  {copied ? (
+                    <motion.div
+                      key="check"
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0.5, opacity: 0 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                      <FaCheck size={24} />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="arrow"
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0.5, opacity: 0 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                      <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" size={24} />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </span>
-            </a>
+            </button>
           </div>
         </div>
 
