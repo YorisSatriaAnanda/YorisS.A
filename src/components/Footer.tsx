@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowRight, FaCheck } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleCopy = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -67,7 +75,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/fhuzin_/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Instagram</a>
           </div>
           <div className="text-left md:text-right text-primary-500 font-mono text-xs uppercase tracking-widest flex flex-col gap-2">
-            <p>LOCAL TIME: {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute:'2-digit' })}</p>
+            <p>LOCAL TIME: {time.toLocaleTimeString('en-US', { hour: '2-digit', minute:'2-digit' })}</p>
             <p>&copy; {new Date().getFullYear()} YORIS. ALL RIGHTS RESERVED.</p>
           </div>
         </div>
