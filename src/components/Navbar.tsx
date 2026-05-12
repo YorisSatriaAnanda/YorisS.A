@@ -16,7 +16,7 @@ const Navbar = () => {
       <header className="fixed top-0 w-full z-50 mix-blend-difference p-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-syne font-bold tracking-tighter text-white hover-target">
-            YORIS©
+            YORIS
           </Link>
 
           <button
