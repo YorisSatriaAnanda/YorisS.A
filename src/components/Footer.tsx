@@ -34,12 +34,12 @@ const Footer = () => {
           <div>
             <button 
               onClick={handleCopy}
-              className="group flex items-center gap-3 sm:gap-6 text-[5vw] sm:text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2 text-left w-full overflow-hidden"
+              className="group flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-6 text-[4.5vw] sm:text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2 text-left w-full"
             >
-              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300 pb-2 inline-block truncate sm:overflow-visible sm:whitespace-normal">
+              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300 pb-2 inline-block break-all sm:break-normal">
                 yorissatriaananda@gmail.com
               </span>
-              <span className={`w-14 h-14 flex items-center justify-center rounded-full border border-white/20 transition-all ${copied ? 'bg-white text-black' : 'group-hover:bg-white group-hover:text-black'}`}>
+              <span className={`w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border border-white/20 transition-all flex-shrink-0 ${copied ? 'bg-white text-black' : 'group-hover:bg-white group-hover:text-black'}`}>
                 <AnimatePresence mode="wait">
                   {copied ? (
                     <motion.div
@@ -49,7 +49,7 @@ const Footer = () => {
                       exit={{ scale: 0.5, opacity: 0 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      <FaCheck size={24} />
+                      <FaCheck className="w-4 h-4 sm:w-6 sm:h-6" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -59,7 +59,7 @@ const Footer = () => {
                       exit={{ scale: 0.5, opacity: 0 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" size={24} />
+                      <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-4 h-4 sm:w-6 sm:h-6" />
                     </motion.div>
                   )}
                 </AnimatePresence>
