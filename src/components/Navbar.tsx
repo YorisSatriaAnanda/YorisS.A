@@ -63,10 +63,25 @@ const Navbar = () => {
                   initial={{ y: '100%' }}
                   animate={{ y: 0 }}
                   exit={{ y: '100%' }}
-                  transition={{ duration: 0.5, delay: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{ duration: 0.5, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
+                  className="flex flex-wrap gap-6"
                 >
-                  <a href="mailto:hello@yoris.com" className="text-xl md:text-2xl font-medium border-b border-black pb-1 hover-target">
-                    hello@yoris.com
+                  <a href="https://github.com/YorisSatriaAnanda" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-black/60 transition-colors hover-target uppercase tracking-widest">Github</a>
+                  <a href="https://www.linkedin.com/in/yoris-satria-ananda-664735334/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-black/60 transition-colors hover-target uppercase tracking-widest">LinkedIn</a>
+                  <a href="https://www.instagram.com/fhuzin_/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-black/60 transition-colors hover-target uppercase tracking-widest">Instagram</a>
+                </motion.div>
+              </div>
+
+              <div className="overflow-hidden mt-4 pb-2">
+                <motion.div
+                  initial={{ y: '100%' }}
+                  animate={{ y: 0 }}
+                  exit={{ y: '100%' }}
+                  transition={{ duration: 0.5, delay: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  className="pt-2"
+                >
+                  <a href="mailto:yorissatriaananda@gmail.com" className="text-xl md:text-2xl font-medium border-b border-black pb-1 hover-target leading-normal inline-block">
+                    yorissatriaananda@gmail.com
                   </a>
                 </motion.div>
               </div>

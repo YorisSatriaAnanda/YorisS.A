@@ -14,11 +14,11 @@ const Footer = () => {
           
           <div>
             <a 
-              href="mailto:hello@yoris.com" 
-              className="group flex items-center gap-6 text-3xl md:text-5xl font-syne font-bold transition-colors hover-target"
+              href="mailto:yorissatriaananda@gmail.com" 
+              className="group flex items-center gap-6 text-3xl md:text-5xl font-syne font-bold transition-colors hover-target leading-normal py-2"
             >
-              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300">
-                hello@yoris.com 
+              <span className="hover:text-transparent hover:[-webkit-text-stroke:1px_white] transition-all duration-300 pb-2 inline-block">
+                yorissatriaananda@gmail.com 
               </span>
               <span className="p-4 rounded-full border border-white/20 group-hover:bg-white group-hover:text-black transition-all">
                 <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" size={24} />
@@ -29,10 +29,9 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-t border-white/10 pt-8">
           <div className="flex flex-wrap gap-8">
-            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Github</a>
-            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">LinkedIn</a>
-            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Twitter</a>
-            <a href="#" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Dribbble</a>
+            <a href="https://github.com/YorisSatriaAnanda" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Github</a>
+            <a href="https://www.linkedin.com/in/yoris-satria-ananda-664735334/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">LinkedIn</a>
+            <a href="https://www.instagram.com/fhuzin_/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary-400 transition-colors hover-target uppercase tracking-widest">Instagram</a>
           </div>
           <div className="text-left md:text-right text-primary-500 font-mono text-xs uppercase tracking-widest flex flex-col gap-2">
             <p>LOCAL TIME: {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute:'2-digit' })}</p>

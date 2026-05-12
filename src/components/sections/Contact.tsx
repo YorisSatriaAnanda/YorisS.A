@@ -19,21 +19,21 @@ const Contact = () => {
                 <input 
                   type="text" 
                   placeholder="WHAT'S YOUR NAME?" 
-                  className="w-full bg-transparent text-2xl md:text-4xl font-syne uppercase focus:outline-none placeholder:text-primary-800 hover-target text-white"
+                  className="w-full bg-transparent text-2xl md:text-4xl font-sans uppercase focus:outline-none placeholder:text-primary-800 hover-target text-white"
                 />
               </div>
               <div className="border-b border-white/30 pb-4">
                 <input 
                   type="email" 
                   placeholder="WHAT'S YOUR EMAIL?" 
-                  className="w-full bg-transparent text-2xl md:text-4xl font-syne uppercase focus:outline-none placeholder:text-primary-800 hover-target text-white"
+                  className="w-full bg-transparent text-2xl md:text-4xl font-sans uppercase focus:outline-none placeholder:text-primary-800 hover-target text-white"
                 />
               </div>
               <div className="border-b border-white/30 pb-4">
                 <textarea 
                   placeholder="TELL ME ABOUT YOUR PROJECT" 
                   rows={3}
-                  className="w-full bg-transparent text-2xl md:text-4xl font-syne uppercase focus:outline-none placeholder:text-primary-800 hover-target resize-none text-white"
+                  className="w-full bg-transparent text-2xl md:text-4xl font-sans uppercase focus:outline-none placeholder:text-primary-800 hover-target resize-none text-white"
                 ></textarea>
               </div>
               
