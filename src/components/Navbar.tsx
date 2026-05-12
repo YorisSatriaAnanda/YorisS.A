@@ -80,7 +80,7 @@ const Navbar = () => {
                   transition={{ duration: 0.5, delay: 0.6, ease: [0.76, 0, 0.24, 1] }}
                   className="pt-2"
                 >
-                  <a href="mailto:yorissatriaananda@gmail.com" className="text-xl md:text-2xl font-medium border-b border-black pb-1 hover-target leading-normal inline-block">
+                  <a href="mailto:yorissatriaananda@gmail.com" className="text-[4.5vw] sm:text-xl md:text-2xl font-medium border-b border-black pb-1 hover-target leading-normal inline-block truncate max-w-full">
                     yorissatriaananda@gmail.com
                   </a>
                 </motion.div>
